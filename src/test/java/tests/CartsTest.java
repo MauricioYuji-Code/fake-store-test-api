@@ -47,7 +47,7 @@ public class CartsTest {
                 .spec(CommonRequestBuilder.getFakeStoreSpec())
                 .body(getPayloadProduct("11"))
                 .when()
-                .post(path + "/11")
+                .put(path + "/11")
                 .then()
                 .statusCode(200);
     }
