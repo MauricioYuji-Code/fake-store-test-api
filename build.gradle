@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'idea'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //testImplementation group: 'org.testng', name: 'testng', version: '7.8.0'
+    //implementation("com.aventstack:extentreports-testng-adapter:1.2.2")
+    implementation group: 'org.yaml', name: 'snakeyaml', version: '2.0'
+    implementation group: 'io.rest-assured', name: 'rest-assured', version: '5.4.0'
+    testImplementation group: 'com.shazam', name: 'shazamcrest', version: '0.11'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
